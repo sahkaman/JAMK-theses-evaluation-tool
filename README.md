@@ -1,5 +1,5 @@
 # JAMK-theses-evaluation-tool
-Simple PHP -tool to enhance evaluation of Bachelor's Theses / Master's Theses.
+Simple PHP -tool to enhance/help the evaluation of Bachelor's Theses / Master's Theses @ http://www.jamk.fi.
 
 There are a few hard directs @ http://student.labranet.jamk.fi/~sahka/ so please reconfigure them to direct at your home folder... Didn't go through them all...
 
