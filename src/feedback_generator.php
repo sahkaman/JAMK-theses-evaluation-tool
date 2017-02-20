@@ -184,6 +184,20 @@ include("yamk_criteria.php");
 
 	</table>
 		<br>
+		<a>
+		<?php 
+		if($lang == "eng") { 
+				echo "<a><b>Comments</b></a>"; 
+				$placeholder = "Write your comments here";
+			} 
+			else { 
+				echo "<a><b>Vapaat kommentit</b></a>"; 
+				$placeholder = "Kirjoita kommenttisi tähän";
+			} 
+		?>
+		<br>
+		<textarea placeholder="<?php echo $placeholder?>"rows="5" cols="50" name="comments" style="width:100%;"></textarea>
+		<br>
 		<div id="button_holder">
 			<button type="submit" value="Submit">Submit</button>
 		</div>

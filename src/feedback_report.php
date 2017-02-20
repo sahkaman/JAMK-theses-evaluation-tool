@@ -26,15 +26,17 @@ include("yamk_criteria.php");
 <title>SahKa feedback results</title>
 </head>
 <body>
-<?php if($_GET['eng'] == "eng") { echo "<h1> Results </h1>"; } else { echo "<h1> Tulokset </h1>"; } ?>
-
 <?php 
+
+if($_GET['eng'] == "eng") { echo "<h1> Results </h1>"; } else { echo "<h1> Tulokset </h1>"; } 
+
+
 date_default_timezone_set('EET');
 echo "<a>" . date('j\.n\.Y H:i:s') . "</a>";
 
-?>
+if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as1 . "</h2>"; } else { echo "<h2>" . $topics[0] . " (painotettu arvosana) : " . $as1 . "</h2>"; } 
 
-<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as1 . "</h2>"; } else { echo "<h2>" . $topics[0] . " (painotettu arvosana) : " . $as1 . "</h2>"; } ?>
+?>
 
 
 <a> <?php echo get_sentence($_POST["as1_1"], $criteria, 0); ?> </a>
@@ -74,7 +76,21 @@ echo "<a>" . date('j\.n\.Y H:i:s') . "</a>";
 <a> <?php echo get_sentence($_POST["as5_2"], $criteria, 19); ?> </a>
 <a> <?php echo get_sentence($_POST["as5_3"], $criteria, 20); ?> </a>
 
-<?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> <h1>"; } ?>
+<?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> </h1>"; } ?>
+
+<?php
+
+if(isset($_POST["comments"])) {  
+	if($_GET['eng'] == "eng") {
+		echo "<h2>Comments</h2><a>";
+	} else {		
+		echo "<br><h2>Vapaat kommentit</h2><a>";
+	}
+	//htmlspecialchars($_POST["comments"]);
+	echo $_POST["comments"]; 
+	echo "</a>";
+}
+?>
 
 </body>
 </html>

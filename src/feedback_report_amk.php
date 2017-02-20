@@ -68,7 +68,21 @@ if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . 
 <a> <?php echo get_sentence($_POST["as5_2"], $criteria, 14); ?> </a>
 <a> <?php echo get_sentence($_POST["as5_3"], $criteria, 15); ?> </a>
 
-<?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> <h1>"; } ?>
+<?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> </h1>"; } ?>
+
+<?php
+
+if(isset($_POST["comments"])) {  
+	if($_GET['eng'] == "eng") {
+		echo "<h2>Comments</h2><a>";
+	} else {		
+		echo "<br><h2>Vapaat kommentit</h2><a>";
+	}
+	//htmlspecialchars($_POST["comments"]);
+	echo $_POST["comments"]; 
+	echo "</a>";
+}
+?>
 
 </body>
 </html>
