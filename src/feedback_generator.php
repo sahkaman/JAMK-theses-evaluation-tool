@@ -15,7 +15,18 @@ include("yamk_criteria.php");
 <body>
 	<div id="left">
 		<?php if($lang == "eng") { echo "<h1><a href='https://studyguide.jamk.fi/globalassets/opinto-opas-yamk/opiskelu/opinnaytetyo/ohjeet-ja-lomakkeet/assessment/assessment-criteria-yamk2014.pdf.pdf' target='_blank'> YAMK -assessment criteria</a> @JAMK</h1>"; } else { echo "<h1><a href='http://opinto-oppaat.jamk.fi/globalassets/opinto-opas-yamk/opiskelu/opinnaytetyo/ohjeet-ja-lomakkeet/arviointi/opinnaytetyon-arviointikriteerit-yamk2014.pdf' target='_blank'> YAMK -arviointikriteerit</a> @JAMK</h1>"; } ?>
-		<a href="feedback_generator.php?eng=1">In English</a>&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator.php?eng=0">Suomeksi</a>&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator_amk.php">AMK</a>&nbsp&nbsp&nbsp&nbsp<a><?php if($lang == "eng") { echo "This tool is programmed by"; } else { echo "Sivuston ohjelmoinut"; } ?> </a><a href="https://fi.linkedin.com/in/karo-saharinen-1842b07" target="_blank">Karo Saharinen</a>
+		<a href="feedback_generator.php?eng=1">In English</a>
+		&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator.php?eng=0">Suomeksi</a>
+		&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator_amk.php">AMK</a>
+		&nbsp&nbsp&nbsp&nbsp
+		<?php 
+			if($lang == "eng") { 
+				echo "</a>This tool is <a href='https://github.com/sahkaman/JAMK-theses-evaluation-tool' target='_blank'>programmed</a> by </a><a href='https://fi.linkedin.com/in/karo-saharinen-1842b07' target='_blank'>Karo Saharinen</a>"; 
+			} 
+			else { 
+				echo "Sivuston <a href='https://github.com/sahkaman/JAMK-theses-evaluation-tool' target='_blank'>ohjelmoinut</a> <a href='https://fi.linkedin.com/in/karo-saharinen-1842b07' target='_blank'>Karo Saharinen</a>"; 
+			} 
+		?> 
 	</div>
 
 	<div id="right">
