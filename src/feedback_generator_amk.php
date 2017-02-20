@@ -15,7 +15,7 @@ include("amk_criteria.php");
 
 	<div id="left">
 		<?php if($lang == "eng") { echo "<h1> <a href='https://studyguide.jamk.fi/globalassets/opinto-opas-amk/opiskelu/opinnaytetyo/assessment/assessment-criteria-amk2011.pdf' target='_blank'> AMK -assessment criteria</a> @JAMK</h1>"; } else { echo "<h1> <a href='http://opinto-oppaat.jamk.fi/globalassets/opinto-opas-amk/opiskelu/opinnaytetyo/arviointi/opinnaytetyon-arviointikriteerit-amk2014.pdf' target='_blank'> AMK -arviointikriteerit</a> @JAMK</h1>"; } ?>
-		<a href="feedback_generator_amk.php?eng=1">In English</a>&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator_amk.php?eng=0">Suomeksi</a>&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator.php">YAMK</a>
+		<a href="feedback_generator_amk.php?eng=1">In English</a>&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator_amk.php?eng=0">Suomeksi</a>&nbsp&nbsp&nbsp&nbsp<a href="feedback_generator.php">YAMK</a>&nbsp&nbsp&nbsp&nbsp<a><?php if($lang == "eng") { echo "This tool is programmed by"; } else { echo "Sivuston ohjelmoinut"; } ?> </a><a href="https://fi.linkedin.com/in/karo-saharinen-1842b07" target="_blank">Karo Saharinen</a>
 	</div>
 
 	<div id="right">
