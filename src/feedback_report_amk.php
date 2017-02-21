@@ -20,24 +20,35 @@ include("amk_criteria.php");
 	$total = ( $as1 + $as2 + $as3 + $as4 + $as5 ) / 5;
 
 	$sentences_on_first = get_sentence($_POST["as1_1"], $criteria, 0);
+	$sentences_on_first .= " ";
 	$sentences_on_first .= get_sentence($_POST["as1_2"], $criteria, 1);
+	$sentences_on_first .= " ";
 	$sentences_on_first .= get_sentence($_POST["as1_3"], $criteria, 2);
 
 	$sentences_on_second = get_sentence($_POST["as2_1"], $criteria, 3);
+	$sentences_on_second .= " ";
 	$sentences_on_second .= get_sentence($_POST["as2_2"], $criteria, 4);
+	$sentences_on_second .= " ";
 	$sentences_on_second .= get_sentence($_POST["as2_3"], $criteria, 5);
+	$sentences_on_second .= " ";
 	$sentences_on_second .= get_sentence($_POST["as2_4"], $criteria, 6);
 
 	$sentences_on_third = get_sentence($_POST["as3_1"], $criteria, 7);
+	$sentences_on_third .= " ";
 	$sentences_on_third .= get_sentence($_POST["as3_2"], $criteria, 8);
+	$sentences_on_third .= " ";
 	$sentences_on_third .= get_sentence($_POST["as3_3"], $criteria, 9);
 
 	$sentences_on_fourth = get_sentence($_POST["as4_1"], $criteria, 10);
+	$sentences_on_fourth .= " ";
 	$sentences_on_fourth .= get_sentence($_POST["as4_2"], $criteria, 11);
+	$sentences_on_fourth .= " ";
 	$sentences_on_fourth .= get_sentence($_POST["as4_3"], $criteria, 12); 
 
 	$sentences_on_fifth = get_sentence($_POST["as5_1"], $criteria, 13);
+	$sentences_on_fifth .= " ";
 	$sentences_on_fifth .= get_sentence($_POST["as5_2"], $criteria, 14);
+	$sentences_on_fifth .= " ";
 	$sentences_on_fifth .= get_sentence($_POST["as5_3"], $criteria, 15); 
 ?>
 
