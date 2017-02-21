@@ -19,6 +19,33 @@ include("yamk_criteria.php");
 
 
 	$total = ( $as1 + $as2 + $as3 + $as4 + $as5 ) / 5;
+
+
+	$sentences_on_first = get_sentence($_POST["as1_1"], $criteria, 0);
+	$sentences_on_first .= get_sentence($_POST["as1_2"], $criteria, 1);
+	$sentences_on_first .= get_sentence($_POST["as1_3"], $criteria, 2);
+	$sentences_on_first .= get_sentence($_POST["as1_4"], $criteria, 3);
+
+	$sentences_on_second = get_sentence($_POST["as2_1"], $criteria, 4);
+	$sentences_on_second .= get_sentence($_POST["as2_2"], $criteria, 5);
+	$sentences_on_second .= get_sentence($_POST["as2_3"], $criteria, 6);
+
+	$sentences_on_third = get_sentence($_POST["as3_1"], $criteria, 7);
+	$sentences_on_third .= get_sentence($_POST["as3_2"], $criteria, 8);
+	$sentences_on_third .= get_sentence($_POST["as3_3"], $criteria, 9);
+	$sentences_on_third .= get_sentence($_POST["as3_4"], $criteria, 10);
+	$sentences_on_third .= get_sentence($_POST["as3_5"], $criteria, 11);
+	$sentences_on_third .= get_sentence($_POST["as3_6"], $criteria, 12);
+	$sentences_on_third .= get_sentence($_POST["as3_7"], $criteria, 13);
+	$sentences_on_third .= get_sentence($_POST["as3_8"], $criteria, 14);
+
+	$sentences_on_fourth = get_sentence($_POST["as4_1"], $criteria, 15);
+	$sentences_on_fourth .= get_sentence($_POST["as4_2"], $criteria, 16);
+	$sentences_on_fourth .= get_sentence($_POST["as4_3"], $criteria, 17); 
+
+	$sentences_on_fifth = get_sentence($_POST["as5_1"], $criteria, 18);
+	$sentences_on_fifth .= get_sentence($_POST["as5_2"], $criteria, 19);
+	$sentences_on_fifth .= get_sentence($_POST["as5_3"], $criteria, 20); 
 ?>
 
 <html>
@@ -38,43 +65,26 @@ if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . 
 
 ?>
 
-
-<a> <?php echo get_sentence($_POST["as1_1"], $criteria, 0); ?> </a>
-<a> <?php echo get_sentence($_POST["as1_2"], $criteria, 1); ?> </a>
-<a> <?php echo get_sentence($_POST["as1_3"], $criteria, 2); ?> </a>
-<a> <?php echo get_sentence($_POST["as1_4"], $criteria, 3); ?> </a>
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[1] . " (weighted grade) : " . $as2 . "</h2>"; } else { echo "<h2>" . $topics[1] . " (painotettu arvosana): " . $as2 . "</h2>"; } ?>
 
 
-<a> <?php echo get_sentence($_POST["as2_1"], $criteria, 4); ?> </a>
-<a> <?php echo get_sentence($_POST["as2_2"], $criteria, 5); ?> </a>
-<a> <?php echo get_sentence($_POST["as2_3"], $criteria, 6); ?> </a>
+<textarea rows="8" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
 
-<a> <?php echo get_sentence($_POST["as3_1"], $criteria, 7); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_2"], $criteria, 8); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_3"], $criteria, 9); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_4"], $criteria, 10); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_5"], $criteria, 11); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_6"], $criteria, 12); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_7"], $criteria, 13); ?> </a>
-<a> <?php echo get_sentence($_POST["as3_8"], $criteria, 14); ?> </a>
+<textarea rows="18" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[3] . " (weighted grade) : " . $as4 . "</h2>"; } else { echo "<h2>" . $topics[3] . " (painotettu arvosana): " . $as4 . "</h2>"; } ?>
 
 
-<a> <?php echo get_sentence($_POST["as4_1"], $criteria, 15); ?> </a>
-<a> <?php echo get_sentence($_POST["as4_2"], $criteria, 16); ?> </a>
-<a> <?php echo get_sentence($_POST["as4_3"], $criteria, 17); ?> </a>
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
 
 
-<a> <?php echo get_sentence($_POST["as5_1"], $criteria, 18); ?> </a>
-<a> <?php echo get_sentence($_POST["as5_2"], $criteria, 19); ?> </a>
-<a> <?php echo get_sentence($_POST["as5_3"], $criteria, 20); ?> </a>
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> </h1>"; } ?>
 
