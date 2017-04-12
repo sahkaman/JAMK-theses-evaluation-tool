@@ -208,18 +208,16 @@ include("yamk_criteria.php");
 </body>
 </html>
 
+
 <?php
 function create_row($id, $value, $criteria) {
 	$string = ""; 
 
 		for ($x = 1; $x <=6; $x++) {
-			$string .= "<td>";
-			$string .= "<table>";
-			$string .= "<td style='width: 75%;'>" . $criteria[$id][$x] . "</td>";
-			$string .= "<td style='width: 25%; text-align: center;'><input type='radio' name='" . $value . "' value='" . ($x - 1) . "'><label></label></td>";
-			$string .= "</td>";
-			$string .= "</table>";
-			$string .= "</td>";
+			$string .= "<td class='tab'>";
+			$string .= "<input type='radio' name='" . $value . "' value='" . ($x - 1) . "' id='" . $criteria[$id][$x] . "' required>";
+			$string .= "<label for='" . $criteria[$id][$x] . "'>" . $criteria[$id][$x] . "</label>";
+			$string .= "</label></td>";
 		}
 		
 return $string;
