@@ -5,6 +5,33 @@ table {
 td {
 	position: relative;
 	word-wrap: break-word;
+	height: 100%;
+	width: 100%;
+}
+
+input[type=radio] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+
+}
+
+label {
+    min-height: 100%; /* for the latest browsers which support min-height */
+    height: 100%; /* the only height-related attribute that IE6 does not ignore  */
+    width: 100%;
+    display: block;
+	text-align: center;
+}
+
+input[type="radio"]:checked + label {
+	display: block;
+	color: white;
+	text-align: center;
+    background-color: #005a8c; /* #747679 jamk harmaa, #005a8c jamk sininen */
+	word-wrap: break-word;
 }
 
 input[type="radio"] + label {
@@ -20,16 +47,7 @@ input[type="radio"] + label {
 	float: right;
 }
 
-input[type="radio"]:checked + label {
-	color: white;
-    background-color: rgba(0,0,0,0);
-    border: 5px solid red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;  
-}
+
 #button_holder { text-align: center; }
 
 button {

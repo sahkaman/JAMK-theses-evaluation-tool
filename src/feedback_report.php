@@ -1,4 +1,9 @@
-
+<script>
+function textAreaAdjust(o) {
+  o.style.height = "1px";
+  o.style.height = (25+o.scrollHeight)+"px";
+}
+</script>
 <?php
 if($_GET['eng'] == "eng") { $lang = "eng"; } else { $lang = "fin"; }
 
@@ -77,44 +82,46 @@ if($_GET['eng'] == "eng") { echo "<h1> Results </h1>"; } else { echo "<h1> Tulok
 date_default_timezone_set('EET');
 echo "<a>" . date('j\.n\.Y H:i:s') . "</a>";
 
+// Total average
+if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> </h1>"; }
+
+// Kappale 1
 if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as1 . "</h2>"; } else { echo "<h2>" . $topics[0] . " (painotettu arvosana) : " . $as1 . "</h2>"; } 
 
 ?>
 
-<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
+<textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[1] . " (weighted grade) : " . $as2 . "</h2>"; } else { echo "<h2>" . $topics[1] . " (painotettu arvosana): " . $as2 . "</h2>"; } ?>
 
 
-<textarea rows="8" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
+<textarea onkeyup="textAreaAdjust(this)" rows="8" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
 
-<textarea rows="18" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
+<textarea onkeyup="textAreaAdjust(this)" rows="18" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[3] . " (weighted grade) : " . $as4 . "</h2>"; } else { echo "<h2>" . $topics[3] . " (painotettu arvosana): " . $as4 . "</h2>"; } ?>
 
 
-<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
+<textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
 
-<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
+<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[4] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
 
 
-<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
-
-<?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> </h1>"; } ?>
+<textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
 
 <?php
 
 if(isset($_POST["comments"])) {  
 	if($_GET['eng'] == "eng") {
-		echo "<h2>Comments</h2><a>";
+		echo "<h2>Comments</h2><textarea rows='6' cols='50' name='comments' style='width:100%;'>";
 	} else {		
-		echo "<br><h2>Vapaat kommentit</h2><a>";
+		echo "<br><h2>Vapaat kommentit</h2><textarea onkeyup='textAreaAdjust(this)' rows='6' cols='50' name='comments' style='width:100%;'>";
 	}
 	//htmlspecialchars($_POST["comments"]);
 	echo $_POST["comments"]; 
-	echo "</a>";
+	echo "</textarea>";
 }
 ?>
 
