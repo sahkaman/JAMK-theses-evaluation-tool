@@ -1,3 +1,8 @@
+body {
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	line-height: 120%;
+
+}
 table {
 	table-layout: fixed;
 	width: 100% !important;
@@ -22,6 +27,7 @@ label {
     min-height: 100%; /* for the latest browsers which support min-height */
     height: 100%; /* the only height-related attribute that IE6 does not ignore  */
     width: 100%;
+    font-size: 12pt;
     display: block;
 	text-align: center;
 }
@@ -30,7 +36,7 @@ input[type="radio"]:checked + label {
 	display: block;
 	color: white;
 	text-align: center;
-    background-color: #005a8c; /* #747679 jamk harmaa, #005a8c jamk sininen */
+    background-color: #d80073; /* #d80073 jamk pinkki, #747679 jamk harmaa, #005a8c jamk sininen */
 	word-wrap: break-word;
 }
 
