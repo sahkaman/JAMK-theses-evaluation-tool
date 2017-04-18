@@ -76,6 +76,7 @@ if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</
 if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as1 . "</h2>"; } else { echo "<h2>" . $topics[0] . " (painotettu arvosana) : " . $as1 . "</h2>"; } 
 ?>
 
+<<<<<<< HEAD
 <textarea onmouseover="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[1] . " (weighted grade) : " . $as2 . "</h2>"; } else { echo "<h2>" . $topics[1] . " (painotettu arvosana): " . $as2 . "</h2>"; } ?>
@@ -85,16 +86,37 @@ if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
 
 <textarea onmouseover="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
+=======
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
+
+<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[1] . " (weighted grade) : " . $as2 . "</h2>"; } else { echo "<h2>" . $topics[1] . " (painotettu arvosana): " . $as2 . "</h2>"; } ?>
+
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
+
+<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
+
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
+>>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[3] . " (weighted grade) : " . $as4 . "</h2>"; } else { echo "<h2>" . $topics[3] . " (painotettu arvosana): " . $as4 . "</h2>"; } ?>
 
 
+<<<<<<< HEAD
 <textarea onmouseover="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
+=======
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
+>>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
 
 
+<<<<<<< HEAD
 <textarea onmouseover="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
+=======
+<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
+
+<?php if($_GET['eng'] == "eng") { echo "<h1> Total average grade: <b> " . $total . "</b> <h1>"; } else { echo "<h1> Yhteensä keskiarvo: <b> " . $total . "</b> </h1>"; } ?>
+>>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
 
 <?php
 
