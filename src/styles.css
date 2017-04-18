@@ -32,12 +32,23 @@ label {
 	text-align: center;
 }
 
-input[type="radio"]:checked + label {
+.tab label:hover ~ label,
+.tab label:hover {
+  background-color: #d80073;
+  opacity: 0.7;
+  color: white;
+}
+
+.tab input[type="radio"]:checked + label,
+.tab input[type="radio"]:checked ~ label:hover ~ label,
+.tab input[type="radio"]:checked ~ label:hover,
+.tab label:hover ~ input[type="radio"]:checked ~ label {
 	display: block;
 	color: white;
 	text-align: center;
     background-color: #d80073; /* #d80073 jamk pinkki, #747679 jamk harmaa, #005a8c jamk sininen */
 	word-wrap: break-word;
+	opacity: 1;
 }
 
 input[type="radio"] + label {

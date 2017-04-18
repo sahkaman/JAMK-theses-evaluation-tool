@@ -90,65 +90,24 @@ if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . 
 
 ?>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
-=======
-<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
->>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
-=======
-<textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_first ?></textarea>
->>>>>>> 3a692446c7dcd1bb8cbe46f20928e007b564041e
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[1] . " (weighted grade) : " . $as2 . "</h2>"; } else { echo "<h2>" . $topics[1] . " (painotettu arvosana): " . $as2 . "</h2>"; } ?>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <textarea onkeyup="textAreaAdjust(this)" rows="8" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
 
 <textarea onkeyup="textAreaAdjust(this)" rows="18" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
-=======
-<textarea rows="8" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
-
-<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
-
-<textarea rows="18" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
->>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
-=======
-<textarea onkeyup="textAreaAdjust(this)" rows="8" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_second ?> </textarea>
-
-<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[2] . " (weighted grade) : " . $as3 . "</h2>"; } else { echo "<h2>" . $topics[2] . " (painotettu arvosana): " . $as3 . "</h2>"; } ?>
-
-<textarea onkeyup="textAreaAdjust(this)" rows="18" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_third ?> </textarea>
->>>>>>> 3a692446c7dcd1bb8cbe46f20928e007b564041e
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[3] . " (weighted grade) : " . $as4 . "</h2>"; } else { echo "<h2>" . $topics[3] . " (painotettu arvosana): " . $as4 . "</h2>"; } ?>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
-=======
-<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
-
-<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[0] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
->>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
-
-<?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[4] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
-
-<<<<<<< HEAD
-=======
-<textarea rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
->>>>>>> 256fbdd83e1d60471d4334772378323d605d4c64
-=======
 <textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fourth ?> </textarea>
 
 <?php if($_GET['eng'] == "eng") { echo "<h2>" . $topics[4] . " (weighted grade) : " . $as5 . "</h2>"; } else { echo "<h2>" . $topics[4] . " (painotettu arvosana): " . $as5 . "</h2>"; } ?>
 
->>>>>>> 3a692446c7dcd1bb8cbe46f20928e007b564041e
 
 <textarea onkeyup="textAreaAdjust(this)" rows="6" cols="50" name="comments" style="width:100%;"><?php echo $sentences_on_fifth ?> </textarea>
 
