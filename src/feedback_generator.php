@@ -7,12 +7,75 @@ include("yamk_criteria.php");
 <html>
 
 <head>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="floating-1.12.js"></script>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<title>SahKa feedback generator</title>
 </head>
 
 <body>
+	<div id="floatdiv" style="  
+        position:absolute;  
+        width:200px;height:50px;top:10px;right:10px;  
+        padding:16px;background:#747679;
+        color: white;
+        border:0px solid #2266AA;  
+        z-index:100; font-size: 150%; text-align: center">  
+    <b>Average Grade</b>
+    <br><br>
+    <a id="average"></a>
+    </div>  
+      
+    <script type="text/javascript">  
+        floatingMenu.add('floatdiv',  
+            {  
+                // Represents distance from left or right browser window  
+                // border depending upon property used. Only one should be  
+                // specified.  
+                // targetLeft: 0,  
+                targetRight: 10,  
+      
+                // Represents distance from top or bottom browser window  
+                // border depending upon property used. Only one should be  
+                // specified.  
+                // targetTop: 10,  
+                   targetBottom: 10,  
+      
+                // Uncomment one of those if you need centering on  
+                // X- or Y- axis.  
+                // centerX: true,  
+                // centerY: true,  
+      
+                // Remove this one if you don't want snap effect  
+                snap: true  
+            });  
+        $(document).ready(function() {
+	    $('input:radio').change(function() {
+
+	    });
+		$('.tab').click(function(){
+			var rows = [];
+			var value = parseInt($(this).val());
+			$('input[type="radio"]:checked').each(function(){
+				rows.push(parseInt($(this).val()));
+			});
+			var checkedradios = $('input:radio:checked').length;
+			countAverage(rows, checkedradios);
+		});
+		function countAverage(rows, checked) {
+			var sum = 0;
+			for (var i=0; i<rows.length; i++) {
+				sum = sum + rows[i];
+			}
+			// var average = Math.round((sum / checked) * 100) / 100;
+			var average = sum / checked;
+        	var average2 = average.toFixed(4);
+        	document.getElementById("average").innerHTML = average2;
+		}
+	});
+    </script>  
+
 	<div id="left">
 		<?php if($lang == "eng") { echo "<h1><a href='https://studyguide.jamk.fi/globalassets/opinto-opas-yamk/opiskelu/opinnaytetyo/ohjeet-ja-lomakkeet/assessment/assessment-criteria-yamk2014.pdf.pdf' target='_blank'> YAMK -assessment criteria</a> @JAMK</h1>"; } else { echo "<h1><a href='http://opinto-oppaat.jamk.fi/globalassets/opinto-opas-yamk/opiskelu/opinnaytetyo/ohjeet-ja-lomakkeet/arviointi/opinnaytetyon-arviointikriteerit-yamk2014.pdf' target='_blank'> YAMK -arviointikriteerit</a> @JAMK</h1>"; } ?>
 		<a href="feedback_generator.php?eng=1">In English</a>

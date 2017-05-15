@@ -22,8 +22,8 @@ include("yamk_criteria.php");
 	// arvosana 5
 	$as5 = ($_POST["as5_1"] + $_POST["as5_2"] + $_POST["as5_3"] ) / 3;
 
-
-	$total = ( $as1 + $as2 + $as3 + $as4 + $as5 ) / 5;
+	$total = ($_POST["as1_1"] + $_POST["as1_2"] + $_POST["as1_3"] + $_POST["as1_4"] + $_POST["as2_1"] + $_POST["as2_2"] + $_POST["as2_3"] + $_POST["as3_1"] + $_POST["as3_2"] + $_POST["as3_3"] + $_POST["as3_4"] +	$_POST["as3_5"] + $_POST["as3_6"] + $_POST["as3_7"] + $_POST["as3_8"] + $_POST["as4_1"] + $_POST["as4_2"] + $_POST["as4_3"] + $_POST["as5_1"] + $_POST["as5_2"] + $_POST["as5_3"]) / 21;
+	// $total = ( $as1 + $as2 + $as3 + $as4 + $as5 ) / 5;
 
 
 	$sentences_on_first = get_sentence($_POST["as1_1"], $criteria, 0);
