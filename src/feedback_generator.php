@@ -15,11 +15,11 @@ include("yamk_criteria.php");
 </head>
 
 <body>
-	<div id="floatdiv" style="  
+    <div id="floatdiv" style="  
         position:absolute;  
-        width:200px;height:50px;top:10px;right:10px;  
+        width:170px;height:40px;top:10px;right:10px;  
         padding:16px;background:#747679;
-        color: white;
+        color: white; line-height: 60%;
         border:0px solid #2266AA;  
         z-index:100; font-size: 150%; text-align: center">  
     <b>Average Grade</b>
